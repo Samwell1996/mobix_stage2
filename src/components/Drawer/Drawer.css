@@ -1,0 +1,37 @@
+.Drawer {
+  background: #f4f4f4;
+  color: #4e8bff;
+  position: fixed;
+  display: flex;
+  left: 60px;
+  top: 50px;
+  bottom: 0;
+  width: 220px;
+  flex-direction: column;
+  box-sizing: border-box;
+  z-index: 60;
+  transform: translateX(0px);
+  transition: transform 0.2s ease-in;
+  list-style-type: none;
+  padding-top: 3%;
+}
+.Drawer li {
+  line-height: 1.5;
+}
+
+.DrawerClose {
+  background: #f4f4f4;
+  color: #4e8bff;
+  position: fixed;
+  display: flex;
+  left: 0;
+  top: 50px;
+  bottom: 0;
+  flex-direction: column;
+  box-sizing: border-box;
+  z-index: 60;
+  transform: translateX(-100%);
+  transition: transform 0.2s ease-in;
+}
+
+/*# sourceMappingURL=Drawer.css.map */
