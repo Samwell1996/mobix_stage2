@@ -9,44 +9,34 @@ import { faWindowMaximize, faBullhorn, faQuestion, faUser, faCog } from '@fortaw
 function NavBar() {
     return (
         <nav>
-            <ul className="menu-area">
-                <li>
-                    <a>
-                        <FontAwesomeIcon icon={faWindowMaximize} className='FontAwesomeIcon'/>
-                    </a>
-                </li>
-                <li>
-                    <a>To Do</a>
-                </li>
-                <li className='input-place'>
-                    <input
-                        className='input'
-                        placeholder='Пошук'
-                    />
-                </li>
-                <li>
-                    <a>
-                        <FontAwesomeIcon icon={faBullhorn} className='FontAwesomeIcon'/>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <FontAwesomeIcon icon={faQuestion} className='FontAwesomeIcon'/>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <FontAwesomeIcon icon={faUser} className='FontAwesomeIcon'/>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <FontAwesomeIcon icon={faCog} className='FontAwesomeIcon'/>
-                    </a>
-                </li>
-
-            </ul>
+            <div className='leftBar'>
+                <a className='categoryItem'>
+                    <FontAwesomeIcon icon={faWindowMaximize} className='FontAwesomeIcon'/>
+                </a>
+                <a className='writeTodo'>To Do</a>
+            </div>
+            <div className='centerBar'>
+                <input
+                    className='input'
+                    placeholder='Пошук'
+                />
+            </div>
+            <div className='rightBar'>
+                <a className='categoryItem'>
+                    <FontAwesomeIcon icon={faBullhorn} className='FontAwesomeIcon'/>
+                </a>
+                <a className='categoryItem'>
+                    <FontAwesomeIcon icon={faQuestion} className='FontAwesomeIcon'/>
+                </a>
+                <a className='categoryItem'>
+                    <FontAwesomeIcon icon={faUser} className='FontAwesomeIcon'/>
+                </a>
+                <a className='categoryItem'>
+                    <FontAwesomeIcon icon={faCog} className='FontAwesomeIcon'/>
+                </a>
+            </div>
         </nav>
+
     )
 }
 

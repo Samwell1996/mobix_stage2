@@ -1,51 +1,68 @@
-.FontAwesomeIcon
-  color: white
-.menu-area
+nav
   background: #4e8bff
   position: relative
-  margin: 0
+  margin: 0 auto
   padding: 0
+  height: 50px
+  width: 100%
   display: flex
   flex-direction: row
-  justify-content: space-between
-  height: 50px
+  justify-content: space-around
 
 
-  li
-    list-style-type: none
-    display: inline-block
-    a
-      text-decoration: none
-      color: #ffffff
-      font-weight: bold
-      letter-spacing: 2px
-      display: block
-      padding: 10px 30px 10px 30px
-      font-size: 14px
-      line-height: 30px
-      position: relative
-      z-index: 1
-      transition: all 0.2s ease
-      &:hover
-        background: #12358f
-        cursor: pointer
-      &:active
-        background: #346fef
+.leftBar
+  display: flex
+  position: relative
+  flex-direction: row
+  float: left
+.categoryItem
+  line-height: 30px
+  position: relative
+  color: #ffffff
+  text-decoration: none
+  padding: 5px 30px 10px 30px
+  font-size: 17px
+  &:hover
+    background: #12358f
+    cursor: pointer
+  &:active
+    background: #346fef
+.FontAwesomeIcon
+  width: 40px
+  height: 40px
+.rightBar
+  display: flex
+  position: relative
+  flex-direction: row
+  float: right
+.centerBar
+  display: flex
+  position: relative
+  justify-content: center
+.writeTodo
+  padding: 9px 30px 10px 30px
+  line-height: 30px
+  position: relative
+  color: #ffffff
+  text-decoration: none
+  font-size: 17px
+  &:hover
+    background: #12358f
+    cursor: pointer
+  &:active
+    background: #346fef
 
-.is-active
-  background: #ff984c
 .input
   padding: 13px
   cursor: pointer
   height: 20px
   line-height: 1.9rem
-  width: 500px
   text-align: center
   font-size: 16px
   background: #c3ddf7
   outline: none
   margin: 0 auto
-
+  width: 500px
   &:hover
     background: #ffffff
     cursor: pointer
