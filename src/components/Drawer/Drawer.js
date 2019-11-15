@@ -1,31 +1,41 @@
-import React from 'react'
-import './Drawer.css'
+import React from 'react';
+import { rootStore as store } from "../../store/RootStore";
+import { values } from "mobx";
+import { CreateTasks, DrawerItems } from "../index";
+import { observer } from "mobx-react";
 
-function Drawer( {isVisible}) {
 
-    const links = [
-        1,2
-    ];
+const Drawer = ({isVisibleDrawer, onToggleVisibleDrawer, setGroup, isGroup}) => {
 
-    function renderLinks() {
-        return links.map((link, index) => {
-            return (
-                <li key={index}>
-                    <a> Link {link} </a>
-                </li>
-            )
-        })
-    }
-
-    return (
-        <div className={isVisible ? "DrawerClose" : "Drawer" }>
-            <div >
-                 <ul>
-                    { isVisible ?  null : renderLinks()}
+    return  (
+        <div>
+        <div className={isVisibleDrawer ? "Drawer" : "DrawerClose"}>
+            {isVisibleDrawer && (
+                <div>
+                <ul className='ul'>
+                    {
+                        values(store.groups.list).map((category, index) => {
+                            return <DrawerItems
+                                setGroup={setGroup}
+                                index={index}
+                                key={category.id}
+                            >
+                                {category}
+                            </DrawerItems>
+                        })
+                    }
                 </ul>
-            </div>
+                    < CreateTasks
+                        isGroup={isGroup}
+                        isGroupList={true}
+                        isVisibleInput={isVisibleDrawer}
+                        onClick={onToggleVisibleDrawer}
+                    />
+                </div>
+                )}
+        </div>
         </div>
     )
-}
+};
 
-export default Drawer
+export default observer(Drawer)

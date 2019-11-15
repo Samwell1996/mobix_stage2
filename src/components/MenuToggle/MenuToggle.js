@@ -5,22 +5,27 @@ import { Drawer } from '../index'
 import './MenuToggle.css'
 
 
-function MenuToggle() {
+function MenuToggle({setGroup, isGroup}) {
 
-    const [isVisible, setVisible] = useState(true);
+    const [isVisibleDrawer, setVisibleDrawer] = useState(true);
 
-    function getOpenMenuToggle(event) {
-        event.preventDefault();
-        setVisible(!isVisible);
+    function onToggleVisibleDrawer(event) {
+        if (event) {
+            event.preventDefault();
+        }
+        setVisibleDrawer(!isVisibleDrawer);
 
     }
-
     return (
         <div className='MenuToggle'>
-            <div onClick={getOpenMenuToggle}>
+            <div onClick={onToggleVisibleDrawer}>
                 <FontAwesomeIcon  icon={faBars} className='MenuToggleAwesome'/>
             </div>
-            <Drawer isVisible={isVisible}/>
+            <Drawer
+                isGroup={isGroup}
+                setGroup={setGroup}
+                onToggleVisibleDrawer={onToggleVisibleDrawer}
+                isVisibleDrawer={isVisibleDrawer}/>
         </div>
     )
 }

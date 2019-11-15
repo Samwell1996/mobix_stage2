@@ -1,0 +1,18 @@
+.detailsTask {
+  font-size: 18px;
+  color: #4e8bff;
+  padding-left: 300px;
+  padding-top: 55px;
+}
+
+.taskCompleted {
+  text-decoration-line: line-through;
+  padding: 20px;
+}
+
+.task {
+  text-decoration-line: none;
+  padding: 20px;
+}
+
+/*# sourceMappingURL=DetailsTask.css.map */

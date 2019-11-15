@@ -23,17 +23,19 @@ function NavBar() {
             </div>
             <div className='rightBar'>
                 <a className='categoryItem'>
-                    <FontAwesomeIcon icon={faBullhorn} className='FontAwesomeIcon'/>
+                    <FontAwesomeIcon icon={faCog} className='FontAwesomeIcon'/>
                 </a>
                 <a className='categoryItem'>
                     <FontAwesomeIcon icon={faQuestion} className='FontAwesomeIcon'/>
                 </a>
                 <a className='categoryItem'>
+                    <FontAwesomeIcon icon={faBullhorn} className='FontAwesomeIcon'/>
+                </a>
+
+                <a className='categoryItem'>
                     <FontAwesomeIcon icon={faUser} className='FontAwesomeIcon'/>
                 </a>
-                <a className='categoryItem'>
-                    <FontAwesomeIcon icon={faCog} className='FontAwesomeIcon'/>
-                </a>
+
             </div>
         </nav>
 
