@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import {rootStore as store} from "../../store/RootStore";
+import { rootStore as store } from "../../store/RootStore";
 
 
 const CreateTasks = ({isVisibleInput,isGroupList, isGroup, title}) => {
     const [inputValue, setInputValue] = useState("");
     const [isCreate, setCreate] = useState(false);
+
 
     function changeHandler(event) {
         setInputValue(event.target.value)
@@ -18,7 +19,7 @@ const CreateTasks = ({isVisibleInput,isGroupList, isGroup, title}) => {
             setInputValue("");
         }
     }
-
+    console.log(isGroup);
     function pressHandlerForTodos(event) {
         if (event.key === "Enter") {
             store.todos.add(inputValue);

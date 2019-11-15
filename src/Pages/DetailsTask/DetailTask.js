@@ -36,9 +36,9 @@ const DetailTask = ({isGroup, groupDetails}) => {
                 </div>
                 <CreateTasks
                     isGroup={isGroup}
-                    isGroupList={false}
                     isVisibleInput={isVisible}
                     onClick={onVisible}
+                    title={groupDetails.title}
 
                 />
             </div>
