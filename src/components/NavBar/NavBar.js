@@ -1,6 +1,5 @@
 import React from 'react';
 import './NavBar.css';
-import '../images/bars-solid.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWindowMaximize, faBullhorn, faQuestion, faUser, faCog } from '@fortawesome/free-solid-svg-icons';
 
